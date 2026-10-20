@@ -34,3 +34,7 @@ python3 -m http.server 3000 --bind 0.0.0.0 --directory out
 문의 버튼은 연결 준비 안내를 표시합니다. 운영자의 실제 상담 URL/이메일이 필요합니다.
 
 히어로 부유·패럴랙스·스크롤 등장 효과는 GSAP으로 처리하며 `prefers-reduced-motion`을 존중합니다. CSS는 Next.js가 번들링합니다. Google Fonts 연결이 불가하면 시스템 폰트를 사용합니다.
+
+## Pages 최초 활성화
+
+저장소 관리자가 Settings → Pages → Build and deployment → Source에서 **GitHub Actions**를 선택해야 합니다. Actions의 기본 GITHUB_TOKEN으로 사이트 최초 생성을 시도하지 않습니다. 설정 후 Actions에서 최신 Deploy Next.js to GitHub Pages 실행을 열고 Re-run all jobs를 선택하거나 Run workflow를 실행합니다. 빌드 작업은 Pages 활성화와 독립적으로 out 아티팩트를 생성합니다.
