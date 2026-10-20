@@ -7,3 +7,36 @@
 
 /* GSAP owns movement; static content stays visible if JavaScript is unavailable. */
 .reveal{opacity:1;transform:none;transition:none}.float-card,.orb,.mockup,.ai-screen,.hero-copy{animation:none}.hero-copy{z-index:3}.hero-art{z-index:0}.hero.has-hero:after{display:none}
+
+/* Reference composition: generous whitespace and a continuous project strip. */
+@media(min-width:701px){
+ .hero{height:59.2vw;min-height:690px;max-height:1000px}
+ .hero h1{font-size:clamp(40px,4.05vw,64px);letter-spacing:-2.5px}
+ .hero-copy{margin-top:24px}
+ .about .section-heading{display:grid;grid-template-columns:1.1fr 1fr auto;align-items:start}
+ .about .section-heading>.text-link{align-self:end;padding-bottom:10px}
+ .about .display{font-size:clamp(45px,4.7vw,72px)}
+ .works{padding-top:85px;padding-bottom:70px}
+ .works .section-heading{margin-bottom:60px}
+ .works .section-heading h2{font-size:clamp(28px,2.7vw,42px)}
+ .projects{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:43%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#727866 #22261e;padding:10px 0 18px;margin-right:-8.15%;padding-right:7.5%;gap:24px}
+ .project{scroll-snap-align:start;min-width:0}
+ .project-image{height:auto;aspect-ratio:1.77}
+ .project-fallback{min-height:100%;padding:9% 8%}
+ .project-fallback h4{font-size:clamp(25px,2.6vw,40px)}
+ .project-title>span{font-size:40px}
+ .project-title{margin-bottom:22px}
+ .service{padding-top:80px;padding-bottom:80px}
+ .process{padding-top:45px;padding-bottom:100px}
+ .experience-copy{padding-top:45px;padding-bottom:45px}
+ .experience-copy .eyebrow{margin-bottom:10px}
+ .experience-copy h2{margin-bottom:15px}
+ .ai{padding-top:65px;padding-bottom:65px;grid-template-columns:1.5fr 1.1fr .65fr}
+ .ai-steps{grid-column:auto;display:block}
+ .ai-visual{height:270px}
+ .contact{padding-top:75px;padding-bottom:75px}
+}
+@media(min-width:701px) and (max-width:1000px){
+ .hero{min-height:600px}.about .section-heading{grid-template-columns:1fr 1fr}.about .section-heading>.text-link{grid-column:2}
+ .ai{grid-template-columns:1.3fr 1fr}.ai-steps{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr)}
+}
